@@ -29,7 +29,15 @@ import './index.css';
 
 // 8) todo list
 // import App from './example/Ex08';
-import App from './example/Ex08선생님';
+// import App from './example/Ex08선생님';
+
+
+// =====================[STEP 2. 데이터 관리]===========================
+// 9) 양방향 데이터 전달
+import App from './example/Ex09';
+
+
+
 
 import reportWebVitals from './reportWebVitals';
 
