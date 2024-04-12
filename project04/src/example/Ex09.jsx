@@ -9,6 +9,11 @@ const Ex09 = () => {
      */
 
     const [pText, setPText]= useState('')
+    
+    /** Ex09.jsx(상위)에서 사용하는 함수 */
+    const changeData = ()=>{
+        console.log('change Data')
+    }
 
   return (
     <div>
@@ -23,7 +28,7 @@ const Ex09 = () => {
         </p>
 
         {/* 하위 컴포넌트 */}
-        <Ex09Sub text={pText}/>
+        <Ex09Sub text={pText} changeData={changeData}/>
 
         <p>
             <span>2-2. 상위에서 입력받은 값은 어쩌고저쩌고입니다.</span>

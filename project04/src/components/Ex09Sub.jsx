@@ -1,6 +1,7 @@
+// 파일 이름 Ex09SubItem.jsx 여야 하는데......
 import React from 'react'
 
-const Ex09Sub = ({text}) => {
+const Ex09Sub = ({text, changeData}) => {
   return (
     <div>
         <p>
@@ -9,7 +10,7 @@ const Ex09Sub = ({text}) => {
 
         <p>
             <span>2-1. 하위에서 입력 : </span>
-            <input type='text'/>
+            <input type='text' onChange={changeData}/>
         </p>
     </div>
   )
