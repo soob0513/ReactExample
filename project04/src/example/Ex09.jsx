@@ -9,10 +9,12 @@ const Ex09 = () => {
      */
 
     const [pText, setPText]= useState('')
+    const [cText, setCText] = useState('')
     
     /** Ex09.jsx(상위)에서 사용하는 함수 */
-    const changeData = ()=>{
-        console.log('change Data')
+    const changeData = (e)=>{
+        // console.log('change Data', e.target.value)
+        setCText(e.target.value)
     }
 
   return (
@@ -31,7 +33,7 @@ const Ex09 = () => {
         <Ex09Sub text={pText} changeData={changeData}/>
 
         <p>
-            <span>2-2. 상위에서 입력받은 값은 어쩌고저쩌고입니다.</span>
+            <span>2-2. 상위에서 입력받은 값은 {cText}입니다.</span>
         </p>
     </div>
   )

@@ -34,7 +34,10 @@ import './index.css';
 
 // =====================[STEP 2. 데이터 관리]===========================
 // 9) 양방향 데이터 전달
-import App from './example/Ex09';
+// import App from './example/Ex09';
+
+// 10) Context 사용해보기
+import App from './example/Ex10';
 
 
 
