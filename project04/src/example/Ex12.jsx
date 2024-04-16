@@ -27,26 +27,37 @@ const Ex12 = () => {
     let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20240401`;
 
 
+
     // Axios : 비동기통신 라이브러리 (정교한 작업 가능) 
     /*  1) axios 설치 : npm i axios 
             - ctrl+C로 서버 닫고 설치 후 다시 npm start
         2) import axios from 'axios' 
+        3) axios
+            .통신방식(주소)
+            .then(함수)
+            .catch(함수) => 가져오는데 실패했다면? 오류를 띄워줌
     */
-    /*
+    
+    // [STEP 1] : 데이터 확인
     axios          // axios 라는 라이브러리를 이용해서 비동기통신을 하겠다.
     .get(url)      // get 방식으로 데이터를 가져오겠다. 
     .then(res => {console.log(res)})   // then : 가져오는 데에 성공을 했으면 함수 실행 
-    */
-
-    // 영화 이름 가져오기
+    
+    // [STEP 2] : 영화 이름만 가져오기
     axios
     .get(url)
     .then(res => {console.log(res.data.boxOfficeResult.dailyBoxOfficeList)})
 
+    // [STEP 3] : 화면에 띄우려면 변수에 넣어줘야하는데, 화면에 띄워야하니까 state로!
+    axios
+    .get(url)
+    .then(res => {setMovieList(res.data.boxOfficeResult.dailyBoxOfficeList)})
+
+    // console.log('movieList', movieList)  <-- 잘 담겼는지 확인 후 주석처리
+
 
   },[])  // 첫번째 인자에는 함수, 두번째 인자에는 빈 배열이 들어감
   
-
 
 
   // 4. useEffect(()=>{},[변화를 감지할 대상])
@@ -54,12 +65,13 @@ const Ex12 = () => {
   // - useEffect(()=>{},[num])
   // --> num의 값이 바뀔 때마다 useEffect 함수가 실행된다.
 
-
   return (
     <div>
         {console.log('2번 실행 - 화면 렌더링 중...')}
-        Ex12
-        
+        <h2>영화 순위</h2>
+        {movieList.map(item =>
+            <p>{item.movieNm}</p>
+        )}
     </div>
   )
 }

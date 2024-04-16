@@ -43,7 +43,10 @@ import './index.css';
 // import App from './example/Ex11';
 
 // 12) useEffect로 open API 데이터 관리
-import App from './example/Ex12';
+// import App from './example/Ex12';
+
+// 13) useEffect를 활용해서 날씨 데이터를 출력해보자.
+import App from './example/Ex13';
 
 
 

@@ -9,3 +9,14 @@
   justify-content: center;
   align-items: center;
 }
+.weather {
+  background-color: lavender;
+  width: 380px;
+  height: 200px;
+}
+.weather h1 {
+  text-align: center;
+}
+.weather p {
+  padding-left: 90px;
+}
