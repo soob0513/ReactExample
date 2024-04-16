@@ -1,26 +1,28 @@
-import React,{useContext, useState} from 'react'
-import { ColorContext } from '../../example/Ex10';
+import React,{useContext} from 'react'
+import { ColorContextM } from '../../example/Ex10';
+
 
 const ColorList = () => {
 
-  const colors = ['red', 'orange', 'yellow', 'green', 'blue']
-  const data = useContext(ColorContext);
+  const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+  const data = useContext(ColorContextM);
 
-  const changeColor = ()=> {
-    data.setColor(color)
-  }
-
+  const changeColor = (color)=> {
+    data.setColor(color);
+  };
+  
   return (
-    <div>
-        {colors.map((color, index)=> (
-          <div onClick={()=>changeColor(color)} key={index} style={{
-            width:'100px',
-            height:'100px',
-            backgroundColor:color,
-            display:'inline-block'   /** display :'flex' */
-        }}></div>
-        ))}
-    </div>
+     
+     <div>
+         {colors.map((color, index)=> (
+           <div onClick={()=>changeColor(color)} key={index} style={{
+             width:'100px',
+             height:'100px',
+             backgroundColor:color,
+             display:'inline-block'   
+         }}></div>
+         ))}
+     </div>
   )
 }
 

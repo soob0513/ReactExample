@@ -1,9 +1,9 @@
 import React, {createContext, useState} from 'react'
 import ColorList from '../components/Ex10/ColorList';
 import ColorResult from '../components/Ex10/ColorResult';
-// import ColorList_one from '../components/Ex10/ColorList_one';
+// import ColorList_one from '../components/Ex10/ColorList_one'
 
-export const ColorContext = createContext();
+export const ColorContextM = createContext();
 
 const Ex10 = () => {
 
@@ -25,17 +25,17 @@ const Ex10 = () => {
      */
 
     const [color, setColor] = useState('red');
-
+    
   return (
     <div>
         <h1>색상 변경하기</h1>
-        <ColorContext.Provider value={color}>
+        <ColorContextM.Provider value={{color:color, setColor :setColor}}>  {/** 비구조화 할당 */}
           <p>원하는 색상을 클릭하세요. </p>
           <ColorList/>
           <hr/>
           <p>선택하신 색상입니다.</p>
           <ColorResult/>
-        </ColorContext.Provider>
+        </ColorContextM.Provider>
     </div>
   )
 }

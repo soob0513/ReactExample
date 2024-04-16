@@ -37,11 +37,13 @@ import './index.css';
 // import App from './example/Ex09';
 
 // 10) Context 사용해보기
-import App from './example/Ex10';
+// import App from './example/Ex10';
 
 // 11) Context 사용법
 // import App from './example/Ex11';
 
+// 12) useEffect로 open API 데이터 관리
+import App from './example/Ex12';
 
 
 

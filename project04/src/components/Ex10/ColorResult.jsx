@@ -1,20 +1,16 @@
-import React, {useContext, useState} from 'react'
-import { ColorContext } from '../../example/Ex10';
+import React,{useContext} from 'react'
+import { ColorContextM } from '../../example/Ex10';
 
 const ColorResult = () => {
 
-  const data = useContext(ColorContext);
-  const [color, setColor] = useState('red');
+  const data = useContext(ColorContextM);
 
   return (
-    <div>
-           <div style={{
-            width:'100px', 
-            height:'100px',
-            backgroundColor:()=>{data.changeColor()}
-        }}></div>
-        
-    </div>
+    <div style={{
+        width:'100px',
+        height:'100px',
+        backgroundColor:data.color
+    }}></div>
   )
 }
 
