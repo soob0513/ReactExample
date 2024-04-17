@@ -10,9 +10,13 @@
   align-items: center;
 }
 .weather {
-  background-color: lavender;
-  width: 380px;
-  height: 200px;
+  background-color: aliceblue;
+  width: 400px;
+  height: 400px;
+  border-radius:50%;
+  padding-left:10px;
+  padding-top:80px;
+  box-sizing: border-box;
 }
 .weather h1 {
   text-align: center;

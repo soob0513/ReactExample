@@ -46,9 +46,9 @@ const Ex13 = () => {
         <h1>🌞오늘의 날씨는?</h1>
         <p>🌏도시 : {city}</p>
         <p>
-            <span>🌡현재 기온은 {nowTemp}°C 입니다.🌡 </span>
+            <span>🌡현재 기온 : {nowTemp}°C 🌡 </span>
             <br/>
-            <span>🌡체감 기온은 {feelTemp}°C 입니다.🌡 </span>
+            <span>🌡체감 기온 : {feelTemp}°C 🌡 </span>
             <br/>
             <br/>
             <span>{clouds <=30? '☀ 맑음': clouds <= 60? '⛅ 약간 흐림': '☁ 흐림'}</span>

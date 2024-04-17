@@ -46,7 +46,8 @@ import './index.css';
 // import App from './example/Ex12';
 
 // 13) useEffect를 활용해서 날씨 데이터를 출력해보자.
-import App from './example/Ex13';
+// import App from './example/Ex13';
+import App from './example/Ex13Teacher';
 
 
 

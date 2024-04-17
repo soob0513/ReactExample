@@ -20,7 +20,7 @@ const Ex07 = () => {
 
     // setData(data.push(inputRef.current.value));
     // --> state로 만들어진 배열에는 push or pop 사용 불가
-    // --> state로 만들어진 배열에 데이터를 추가할 때는 concat을 사용해야 한다!
+    // --> state로 만들어진 배열에 데이터를 추가할 때는 concat을 사용해야 한다! 
 
     // push --> 기존 배열에 데이터를 추가 --> 기존 배열이 바뀐다
     // concat --> 기존 배열에 데이터를 추가해서 --> 새로운 배열을 생성한다 --> 기존 배열은 안 바뀐다
